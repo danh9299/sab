@@ -1,0 +1,2279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAB Shop</title>
+    <!--CSS Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .cards-show::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Header-->
+
+    <div class="container">
+      <div class="row mt-3 position-relative">
+        <div class="col-4 col-md-2">
+          <!-- Logo SAB -->
+          <a class="navbar-brand" href="#">
+            <img class="img-fluid mb-2" src="../../img/sab_logo-nobg.png" />
+          </a>
+        </div>
+        <div class="col-12 col-md-5">
+          <form class="w-100" role="search">
+            <div class="input-group mb-2">
+              <button class="btn btn-warning" type="submit" id="button-addon1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  height="10"
+                  fill="currentColor"
+                  class="bi bi-search"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                  />
+                </svg>
+              </button>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Tìm kiếm.."
+                aria-label="Example text with button addon"
+                aria-describedby="button-addon1"
+              />
+            </div>
+          </form>
+        </div>
+        <div
+          class="col-4 col-md-5 mt-2 text-md-end position-absolute top-0 end-0"
+        >
+          <a class="px-2 link-dark" aria-current="page" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="currentColor"
+              class="bi bi-cart img-fluid"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+              />
+            </svg>
+          </a>
+          <a class="px-2 link-dark" aria-current="page" href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="currentColor"
+              class="bi bi-person-circle img-fluid"
+              viewBox="0 0 16 16"
+            >
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+              <path
+                fill-rule="evenodd"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--Menu-->
+    <div class="container-fluid mt-2">
+      <nav class="navbar navbar-expand-lg bg-warning">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Trang chủ</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Sản phẩm</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Giới thiệu</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Chính sách</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Nhượng quyền</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Danh mục sản phẩm</a
+                >
+
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Bia</a></li>
+                  <li><a class="dropdown-item" href="#">Sữa dinh dưỡng</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Tăng lực bù khoáng</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Trà</a></li>
+                  <li><a class="dropdown-item" href="#">Cà phê</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Nước ép trái cây</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!--Breadcrumb-->
+    <div class="container mt-4">
+      <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#" style="text-decoration: none; color: black"
+              >Trang chủ</a
+            >
+          </li>
+          <li class="breadcrumb-item active">
+            <a href="#" style="text-decoration: none; color: black">Shop</a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <!-- Slideshow-->
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-12">
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://sab.com.vn/wp-content/uploads/2018/02/4.jpg"
+                  class="d-block img-fluid"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://sab.com.vn/wp-content/uploads/2018/02/6.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://sab.com.vn/wp-content/uploads/2018/02/5.jpg"
+                  class="d-block img-fluid"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Cards bia-->
+    <div class="container mt-4">
+      <div class="card">
+        <div class="card-header bg-warning">Bia</div>
+        <div class="card-body text-bg-light">
+          <div class="row flex-nowrap overflow-auto cards-show">
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://pvmarthanoi.com.vn/wp-content/uploads/2022/12/Untitled-1.png"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Bia Hà Nội</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://pvmarthanoi.com.vn/wp-content/uploads/2022/12/Untitled-1.png"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Bia Hà Nội</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://pvmarthanoi.com.vn/wp-content/uploads/2022/12/Untitled-1.png"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Bia Hà Nội</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://pvmarthanoi.com.vn/wp-content/uploads/2022/12/Untitled-1.png"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Bia Hà Nội</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://pvmarthanoi.com.vn/wp-content/uploads/2022/12/Untitled-1.png"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Bia Hà Nội</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://pvmarthanoi.com.vn/wp-content/uploads/2022/12/Untitled-1.png"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Bia Hà Nội</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://pvmarthanoi.com.vn/wp-content/uploads/2022/12/Untitled-1.png"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Bia Hà Nội</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://pvmarthanoi.com.vn/wp-content/uploads/2022/12/Untitled-1.png"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Bia Hà Nội</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://pvmarthanoi.com.vn/wp-content/uploads/2022/12/Untitled-1.png"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Bia Hà Nội</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://pvmarthanoi.com.vn/wp-content/uploads/2022/12/Untitled-1.png"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Bia Hà Nội</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Cards coca-->
+    <div class="container mt-4">
+      <div class="card">
+        <div class="card-header bg-warning">Nước ngọt</div>
+        <div class="card-body text-bg-light">
+          <div class="row flex-nowrap overflow-auto cards-show">
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://sakukostore.com.vn/Data/Sites/1/Product/3331/cocacola-lon-350ml-4902102000055-2.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Coca Cola</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://sakukostore.com.vn/Data/Sites/1/Product/3331/cocacola-lon-350ml-4902102000055-2.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Coca Cola</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://sakukostore.com.vn/Data/Sites/1/Product/3331/cocacola-lon-350ml-4902102000055-2.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Coca Cola</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://sakukostore.com.vn/Data/Sites/1/Product/3331/cocacola-lon-350ml-4902102000055-2.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Coca Cola</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://sakukostore.com.vn/Data/Sites/1/Product/3331/cocacola-lon-350ml-4902102000055-2.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Coca Cola</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://sakukostore.com.vn/Data/Sites/1/Product/3331/cocacola-lon-350ml-4902102000055-2.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Coca Cola</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://sakukostore.com.vn/Data/Sites/1/Product/3331/cocacola-lon-350ml-4902102000055-2.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Coca Cola</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://sakukostore.com.vn/Data/Sites/1/Product/3331/cocacola-lon-350ml-4902102000055-2.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Coca Cola</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://sakukostore.com.vn/Data/Sites/1/Product/3331/cocacola-lon-350ml-4902102000055-2.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Coca Cola</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://sakukostore.com.vn/Data/Sites/1/Product/3331/cocacola-lon-350ml-4902102000055-2.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Coca Cola</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://sakukostore.com.vn/Data/Sites/1/Product/3331/cocacola-lon-350ml-4902102000055-2.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Coca Cola</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://sakukostore.com.vn/Data/Sites/1/Product/3331/cocacola-lon-350ml-4902102000055-2.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Coca Cola</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Lon</h6>
+                  <h6 class="card-text">10.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Cards tea-->
+    <div class="container mt-4">
+      <div class="card" >
+        <div class="card-header bg-warning">Trà</div>
+        <div class="card-body text-bg-light">
+          <div class="row flex-nowrap overflow-auto cards-show">
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://product.hstatic.net/200000384195/product/tra-xanh-c2-huong-chanh-455ml-202106220927496265_288fe2634226472191bde9b07e9ff6cc.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Trà C2 vị chanh</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Chai</h6>
+                  <h6 class="card-text">12.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://product.hstatic.net/200000384195/product/tra-xanh-c2-huong-chanh-455ml-202106220927496265_288fe2634226472191bde9b07e9ff6cc.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Trà C2 vị chanh</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Chai</h6>
+                  <h6 class="card-text">12.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://product.hstatic.net/200000384195/product/tra-xanh-c2-huong-chanh-455ml-202106220927496265_288fe2634226472191bde9b07e9ff6cc.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Trà C2 vị chanh</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Chai</h6>
+                  <h6 class="card-text">12.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://product.hstatic.net/200000384195/product/tra-xanh-c2-huong-chanh-455ml-202106220927496265_288fe2634226472191bde9b07e9ff6cc.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Trà C2 vị chanh</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Chai</h6>
+                  <h6 class="card-text">12.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://product.hstatic.net/200000384195/product/tra-xanh-c2-huong-chanh-455ml-202106220927496265_288fe2634226472191bde9b07e9ff6cc.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Trà C2 vị chanh</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Chai</h6>
+                  <h6 class="card-text">12.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://product.hstatic.net/200000384195/product/tra-xanh-c2-huong-chanh-455ml-202106220927496265_288fe2634226472191bde9b07e9ff6cc.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Trà C2 vị chanh</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Chai</h6>
+                  <h6 class="card-text">12.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://product.hstatic.net/200000384195/product/tra-xanh-c2-huong-chanh-455ml-202106220927496265_288fe2634226472191bde9b07e9ff6cc.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Trà C2 vị chanh</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Chai</h6>
+                  <h6 class="card-text">12.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://product.hstatic.net/200000384195/product/tra-xanh-c2-huong-chanh-455ml-202106220927496265_288fe2634226472191bde9b07e9ff6cc.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Trà C2 vị chanh</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Chai</h6>
+                  <h6 class="card-text">12.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-white" style="width: 16rem">
+                <img
+                  class="card-img-top img-fluid"
+                  src="https://product.hstatic.net/200000384195/product/tra-xanh-c2-huong-chanh-455ml-202106220927496265_288fe2634226472191bde9b07e9ff6cc.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <hr />
+                  <h5 class="card-title">Trà C2 vị chanh</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Chai</h6>
+                  <h6 class="card-text">12.0000đ</h6>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                      />
+                      <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="icon-link icon-link-hover"
+                    style="
+                      --bs-link-hover-color-rgb: 25, 135, 84;
+                      --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+                    "
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </a>
+
+                  <hr />
+
+                  <a href="#" class="btn btn-dark">Xem thông tin</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Email register-->
+    <div class="mt-4 mb-3 container-fluid bg-warning">
+      <div class="row">
+        <div class="col">
+          <h4 class="p-1 mt-2 text-white">
+            Nhận mã giảm giá và thông báo mới nhất..
+          </h4>
+        </div>
+
+        <div class="col-4 p-1">
+          <div class="input-group mt-2 px-5 mb-2">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Nhập email của bạn.."
+              aria-label="email"
+              aria-describedby="button-addon2"
+            />
+            <button class="btn btn-secondary" type="submit" id="button-addon2">
+              Button
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <div class="card ">
+      <div class="card-header text-center">Hotline: (0968) 405 485</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <h5 class="w-100">CÔNG TY CỔ PHẦN ĐẦU TƯ HÀNG TIÊU DÙNG QUỐC TẾ </h5>
+            <p class="w-100">Địa chỉ: Tầng 14, Tòa nhà Hàn Việt, 203 Minh Khai, phường Minh Khai, Quận Hai Bà Trưng, thành phố Hà Nội, Việt Nam.</p>
+          
+          </div>
+         
+          <div class="col">   
+            
+            <ul class="list-group " >
+            <li class="list-group-item border-0"><a class="w-100" style="text-decoration: none;color:black" href="#">ĐIỀU KIỆN GIAO DỊCH CHUNG</a></li>
+            <li class="list-group-item border-0"><a class="w-100" style="text-decoration: none;color:black" href="#">HƯỚNG DẪN MUA HÀNG</a></li>
+            <li class="list-group-item border-0"><a  class="w-100" style="text-decoration: none;color:black" href="#">CHÍNH SÁCH THANH TOÁN</a></li>
+            <li class="list-group-item border-0"><a class="w-100" style="text-decoration: none;color:black" href="#">CHÍNH SÁCH GIAO HÀNG</a></li>
+           
+          </ul></div>
+          <div class="col">   
+            
+            <ul class="list-group " >
+            <li class="list-group-item border-0"><a style="text-decoration: none;color:black" href="#">TRANG CHỦ</a></li>
+            <li class="list-group-item border-0"><a style="text-decoration: none;color:black" href="#">SẢN PHẨM</a></li>
+            <li class="list-group-item border-0"><a style="text-decoration: none;color:black" href="#">LIÊN HỆ</a></li>
+            <li class="list-group-item border-0"><a style="text-decoration: none;color:black" href="#">TIN TỨC</a></li>
+           
+          </ul></div>
+         
+
+
+      </div>
+    </div>
+
+    <!--Bundle JS Bootstrap-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
